@@ -1,0 +1,33 @@
+body{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+}
+#container{
+    display:flex;
+    padding: 2px ;
+    background-color: white;
+    flex-wrap: wrap;
+    flex:1 1 auto;
+    width:500px;
+    height: 500px;
+    
+    
+}
+.childSquares{
+    color:violet;
+    display:flex;
+    border:1px solid black;
+    font-weight: 900;
+    width: 10px;
+    height:10px;
+}
+
+h1{
+    color:violet;
+    font-family: monospace;
+    font-weight: 900;
+}
+
