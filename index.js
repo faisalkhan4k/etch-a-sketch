@@ -1,42 +1,47 @@
 function getMainDiv(){  
     const mainDiv = document.createElement('div');
     mainDiv.id='container';
+    mainDiv.style.borderRadius = '30px';
     document.body.appendChild(mainDiv);
-    getChildDivs(mainDiv);
+    a.addEventListener('click',()=>{
+        let aWidth = '16px';
+        getChildDivs(mainDiv,aWidth);
+
+    });
+    b.addEventListener('click',()=>{
+        let bWidth = '32px';
+        getChildDivs(mainDiv,bWidth);
+
+    });
 }
 
 getMainDiv();
 
-function getChildDivs(mainDiv){
-    const children=[];
-    total = 0;
-    // if(numberOfSquares === 0 || numberOfSquares === undefined || numberOfSquares === null || numberOfSquares === NaN){
-    //     let messageZero = document.createElement('p');
-    //     messageZero.textContent='No Squares';
-    //     mainDiv.appendChild(messageZero);
-    // }
+function getChildDivs(mainDiv,total){
+
     
-    while(total < 500){
+    const childrens=[];
+    
+    for(let i =0 ; i<155;i++){
         var childDiv = document.createElement('div');
+        if(total === '16px') childDiv.setAttribute('style','width: total; border: 2px solid black');
+        else childDiv.setAttribute('style','total');
         childDiv.textContent=' . ';
-        total+=10+10;//area of a square is l * b 10 * 10 = 100 , area of original 500 * 500 = 250000
-        console.log(total);
+        
         childDiv.setAttribute('class','childSquares');
         mainDiv.appendChild(childDiv);
         
-        children.unshift(childDiv);
+        childrens.unshift(childDiv);
+
+        
         
     }
-        
-    
-
-    
-    colorTheDivs(mainDiv,childDiv,children);
-    
+    const children = mainDiv.getElementsByClassName('childSquares');
+    colorTheDivs(childrens);
+    console.log(childrens)
 }
-
-
-function colorTheDivs(mainDiv,childDiv,children){
+function colorTheDivs(children){
+    console.log(children);
     //try out querySelectorAll() on the child divs and add the event listener for onmouseover
     children.forEach(child => {
         child.addEventListener('mouseover',()=>{
@@ -54,24 +59,18 @@ function colorTheDivs(mainDiv,childDiv,children){
         })
         
     });
-    // for(const child in children){
+    // for(const child of children){
 
     
-    //     mainDiv.addEventListener('mouseover',()=>{
+    //     child.addEventListener('mouseover',()=>{
     //         if(child.style['background-color']==='white'){
     //             child.style['background-color']='black';
     //         }
     //         else{
     //             child.style['background-color']='white';
     //         }       
-    //     })
+    //     });
     // }
 
 }
-
-
-
-
-
-
 console.log(MouseEvent);

@@ -7,24 +7,33 @@ body{
 }
 #container{
     display:flex;
-    padding: 2px ;
     background-color: white;
     flex-wrap: wrap;
     flex:1 1 auto;
     width:500px;
     height: 500px;
-    
+    /* padding:10px; */
     
 }
 .childSquares{
     color:violet;
     display:flex;
-    border:1px solid black;
-    font-weight: 900;
-    width: 10px;
+    width: 20px;
     height:10px;
 }
+#buttons{
+   padding:20px;
 
+}
+
+#buttons button{
+    border-radius: 80%;
+    padding:10px;
+    
+}
+#buttons:hover{
+    background-color: aqua;
+}
 h1{
     color:violet;
     font-family: monospace;
