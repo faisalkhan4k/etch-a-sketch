@@ -40,6 +40,8 @@ function getChildDivs(mainDiv,total){
     colorTheDivs(childrens);
     console.log(childrens)
 }
+
+
 function colorTheDivs(children){
     console.log(children);
     //try out querySelectorAll() on the child divs and add the event listener for onmouseover
